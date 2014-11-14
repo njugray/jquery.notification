@@ -2,19 +2,19 @@
   "name": "jquery-notification",
   "description": "notification based on jquery.",
   "version": "0.1.0",
-  "homepage": "https://github.com/njugray/jquery-notification",
+  "homepage": "https://github.com/njugray/jquery.notification",
   "author": {
     "name": "DGray",
     "url": "http://blog.njugray.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/njugray/jquery-notification.git"
+    "url": "https://github.com/njugray/jquery.notification.git"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/njugray/jquery-notification/master/LICENSE-MIT"
+      "url": "https://github.com/njugray/jquery.notification/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
@@ -30,6 +30,7 @@
     "grunt": "~0.4.0"
   },
   "keywords": [
-    "jquery notification"
+    "jquery",
+    "notification"
   ]
 }
