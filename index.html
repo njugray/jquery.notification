@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Notification Demo</title>
+
+    <link rel="stylesheet" href="css/jquery.notification.css">
+</head>
+<body>
+    <select id="type">
+        <option value="success">success</option>
+    </select>
+    <label for="title">title:</label>
+    <input type="text" placeholder="title" id="title">
+
+    <label for="content">content:</label>
+    <input type="text" id="content">
+
+    <button id="show-btn">Show Notification</button>
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/jquery.notification.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#show-btn").click(function(){
+        
+                var title = $("#title").val();
+                var content = $("#content").val();
+                var type  = $("#type").val();
+
+                $.notify(title, content, type);
+            
+            });
+        });
+    </script> 
+</body>
+</html>
