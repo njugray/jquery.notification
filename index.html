@@ -9,12 +9,18 @@
 <body>
     <select id="type">
         <option value="success">success</option>
+        <option value="info">info</option>
+        <option value="warning">warning</option>
+        <option value="error">error</option>
     </select>
     <label for="title">title:</label>
-    <input type="text" placeholder="title" id="title">
+    <input type="text" value="title" id="title">
 
     <label for="content">content:</label>
-    <input type="text" id="content">
+    <input type="text" id="content" value="content">
+
+    <label for="delay">delay:</label>
+    <input type="text" id="delay" value = "5000">
 
     <button id="show-btn">Show Notification</button>
     <script src="lib/jquery.min.js"></script>
@@ -26,8 +32,9 @@
                 var title = $("#title").val();
                 var content = $("#content").val();
                 var type  = $("#type").val();
+                var delay  = $("#delay").val();
 
-                $.notify(title, content, type);
+                $.notify(title, content, type, delay);
             
             });
         });

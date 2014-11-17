@@ -9,10 +9,19 @@
 			
 		}
 	};
-	var Widget = function(tx, msg, delay){
+
+	//default setting
+	var defaultConfig = {
+		title: "",
+		text: "",
+		delay: 5000,
+		type: "info"
+	};
+	var Widget = function(tx, msg, type, delay){
+
 		var text = $("<div/>").addClass(setting.className.text).html(msg);
 		var title = $("<div/>").addClass(setting.className.title).html(tx);
-		var pane  = $("<div/>").addClass(setting.className.pane).append($("<div/>").addClass("icon")).append(title).append(text);
+		var pane  = $("<div/>").addClass(setting.className.pane).append($("<div/>").addClass("icon icon-"+type)).append(title).append(text);
 		pane.css({"margin-left": "400px", "height": "0"});
 		this.delay = delay || 5000;
 		this.pane = pane;
@@ -51,8 +60,16 @@
 	$("body").append(wrap);
 	
 	if(!$.notify){
-		$.notify = function(tx, msg){
-			var pane = new Widget(tx, msg);
+		$.notify = function(title, text, type, delay){
+			var pane;
+			//the param is config object
+			if(arguments.length === 1 && typeof arguments[0] === "object"){
+				var config = $.extend(defaultConfig, arguments[0]);
+				pane = new Widget(config.title, config.text, config.type, config.delay);
+			}else{
+				pane = new Widget(title, text, type, delay);
+			}
+			
 			pane.show();
 			
 		};
