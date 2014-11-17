@@ -24,8 +24,17 @@
 	height: 40px;
 	margin: 10px;
 	float:left;
-	background: url(img/Ready.png) 0 0 no-repeat;
+	background: url(img/icon-success.png) 0 0 no-repeat;
 	background-size:100% 100%;
+}
+.dg-pane .icon-info{
+	background-image: url(img/icon-info.png);
+}
+.dg-pane .icon-warning{
+	background-image: url(img/icon-warning.png);
+}
+.dg-pane .icon-error{
+	background-image: url(img/icon-error.png);
 }
 .dg-pane .title{
 	margin-left: 60px;
